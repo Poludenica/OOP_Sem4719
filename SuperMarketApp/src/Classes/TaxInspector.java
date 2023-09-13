@@ -1,8 +1,9 @@
 package Classes;
 
 import Interfaces.iActorBehaviour;
+import Interfaces.iReturnOrder;
 
-public class TaxInspector implements iActorBehaviour {
+public class TaxInspector implements iActorBehaviour, iReturnOrder  {
 
     private String name;
     private boolean isTakeOrder;
@@ -38,9 +39,32 @@ public class TaxInspector implements iActorBehaviour {
         isMakeOrder = make;
     }
 
+    protected boolean isReturn;
+
+    private String actorStatus;
+    public String getActorStatus() {
+        return actorStatus;
+    }
+
     @Override
     public Actor getActor() {
         return new OrdinaryClient(name);
     }
+
+    @Override
+    public boolean isReturn() {
+        return isReturn;
+    }
+
+    @Override
+    public void setReturn(boolean ordered) {
+        isReturn = ordered;
+    }
+
+    @Override
+    public void returnOrder() {
+        System.out.println("Клиент " + this.name + " закончил проверку и вернул товар");
+    }
+
 
 }

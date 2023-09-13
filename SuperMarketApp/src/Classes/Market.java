@@ -7,6 +7,7 @@ import Interfaces.iActorBehaviour;
 import Interfaces.iMarketBehaviour;
 import Interfaces.iQueueBehaviour;
 
+
 public class Market implements iMarketBehaviour,iQueueBehaviour {
 
     private List<iActorBehaviour> queue;

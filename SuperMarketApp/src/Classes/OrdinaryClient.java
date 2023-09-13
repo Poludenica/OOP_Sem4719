@@ -36,4 +36,21 @@ public class OrdinaryClient extends Actor {
     public void setName(String name) {
        super.name = name;        
     }
+
+ 
+
+    @Override
+    public boolean isReturn() {
+        return super.isReturn;
+    }
+
+    @Override
+    public void setReturn(boolean ordered) {
+        super.isReturn = ordered;
+    }
+
+    @Override
+    public void returnOrder() {
+        System.out.println(super.name + " вернул товар");
+    }
 }

@@ -48,4 +48,21 @@ public class SpecialClient extends Actor  {
         this.idVIP = idVIP;
     }
 
+ 
+
+     @Override
+    public boolean isReturn() {
+        return super.isReturn;
+    }
+
+    @Override
+    public void setReturn(boolean ordered) {
+        super.isReturn = ordered;
+    }
+
+    @Override
+    public void returnOrder() {
+        System.out.println(super.name + " вернул товар");
+    }
+
 }
